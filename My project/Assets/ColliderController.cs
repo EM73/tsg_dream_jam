@@ -34,10 +34,13 @@ public class ColliderController : MonoBehaviour
                         .tex.GetPixel(i, _webCameraController.tex.height / 2)),
                     ToVector3(_color)) > _strength)
             {
-                list.Add(i);
+                list.Add(_webCameraController.tex.width-i);
             }
         }
 
+        if(list.Count<=0)
+            return;
+        
         min = new Vector3(offset,transform.position.y,
             transform.position.z);
         

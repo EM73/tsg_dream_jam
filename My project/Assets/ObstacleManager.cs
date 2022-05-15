@@ -41,7 +41,7 @@ public class ObstacleManager : MonoBehaviour
         }
         else
         {
-            timer -= Time.deltaTime;
+            timer -= Time.deltaTime * GameManager.get.speed;
         }
     }
     
